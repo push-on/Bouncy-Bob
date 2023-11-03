@@ -1,7 +1,7 @@
 extends Node2D
 
-func _ready() -> void:
-	pass
-
 func _process(_delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("quit"):
+		get_tree().quit()
+	if Input.is_action_just_pressed("reset"):
+		get_tree().reload_current_scene()
