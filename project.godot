@@ -1,20 +1,15 @@
-; Engine configuration file.
-; It's best edited using the editor UI and not directly,
-; since the parameters that go here are not all obvious.
-;
-; Format:
-;   [section] ; section goes between []
-;   param=value ; assign values to parameters
-
 config_version=5
 
 [application]
 
-config/name="Bouncy Bob"
-config/tags=PackedStringArray("2d", "game_dev_tv", "platformer", "side_view", "tutorial")
+config/name="Frog_ninja"
 run/main_scene="res://sceans/level.tscn"
-config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://assets/icons/Icon.jpg"
+config/features=PackedStringArray("4.1", "GL Compatibility")
+boot_splash/bg_color=Color(0.0627451, 0.0627451, 0.0627451, 1)
+boot_splash/show_image=false
+boot_splash/use_filter=false
+config/icon="res://assets/icons/icon.png"
+config/tags=PackedStringArray("2d", "game_dev_tv", "platformer", "side_view", "tutorial")
 
 [display]
 
@@ -69,8 +64,14 @@ reset={
 
 [layer_names]
 
-2d_physics/layer_1="player"
+2d_physics/layer_1="world"
+2d_physics/layer_2="player"
+2d_physics/layer_3="death zone"
+2d_physics/layer_4="traps"
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+driver/threads/thread_model=2
