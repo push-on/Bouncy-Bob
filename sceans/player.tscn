@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://bxd8pp42eotyo" path="res://assets/Ninja Frog/Jump (32x32).png" id="7_u83mo"]
 [ext_resource type="Texture2D" uid="uid://dx2u6m0bokwpw" path="res://assets/Ninja Frog/Wall Jump (32x32).png" id="9_88lrs"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8adxa"]
+height = 22.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_8q1ap"]
 atlas = ExtResource("1_shebg")
 region = Rect2(0, 0, 96, 96)
@@ -454,23 +457,20 @@ animations = [{
 "speed": 20.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8adxa"]
-height = 26.0
-
 [node name="player" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 13
 script = ExtResource("1_2ol2h")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -16)
-sprite_frames = SubResource("SpriteFrames_lbh0i")
-animation = &"IDLE"
-frame_progress = 0.354138
-
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_bottom = 255
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -13)
+position = Vector2(0, -11)
 shape = SubResource("CapsuleShape2D_8adxa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_lbh0i")
+animation = &"IDLE"
+frame_progress = 0.0259176

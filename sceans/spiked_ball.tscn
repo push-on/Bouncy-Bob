@@ -51,11 +51,11 @@ script = ExtResource("1_ff8gq")
 collision_layer = 8
 collision_mask = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-texture = ExtResource("2_2tytb")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_t25yt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("2_2tytb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "move"
