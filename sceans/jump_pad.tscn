@@ -82,6 +82,7 @@ size = Vector2(25, 4.25)
 [node name="Jump_Pad" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_ik7hf")
+jump_force = 350.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -14)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://cfqcn5j4mv2qq"]
+
+[ext_resource type="PackedScene" uid="uid://bysmc72chclms" path="res://sceans/bg.tscn" id="1_17cxm"]
+[ext_resource type="PackedScene" uid="uid://bcal4s26e87u6" path="res://sceans/player.tscn" id="1_lywsx"]
+[ext_resource type="PackedScene" uid="uid://dw62530ep6qeg" path="res://sceans/tile_map.tscn" id="2_32qyh"]
+[ext_resource type="PackedScene" uid="uid://dvo8e0yi8gurm" path="res://sceans/start_position.tscn" id="3_1g1xi"]
+[ext_resource type="PackedScene" uid="uid://cwakd72mkwl85" path="res://sceans/exit.tscn" id="4_6c2m4"]
+
+[node name="Level_2" type="Node2D"]
+
+[node name="BG" parent="." instance=ExtResource("1_17cxm")]
+
+[node name="TileMap" parent="." instance=ExtResource("2_32qyh")]
+layer_0/tile_data = PackedInt32Array(851979, 393216, 8, 851980, 458752, 8, 851981, 458752, 8, 851982, 458752, 8, 851983, 458752, 8, 851984, 458752, 8, 851985, 458752, 8, 851986, 458752, 8, 851987, 458752, 8, 851988, 524288, 8, 917515, 393216, 9, 983051, 393216, 9, 917516, 458752, 9, 917517, 458752, 9, 917518, 458752, 9, 917519, 458752, 9, 917520, 458752, 9, 917521, 458752, 9, 917522, 458752, 9, 917523, 458752, 9, 983052, 458752, 9, 1048596, 524288, 10, 983060, 524288, 9, 917524, 524288, 9, 1048595, 458752, 10, 983059, 458752, 9, 1048594, 458752, 10, 983058, 458752, 9, 1048593, 458752, 10, 983057, 458752, 9, 1048592, 458752, 10, 983056, 458752, 9, 1048591, 458752, 10, 983055, 458752, 9, 1048590, 458752, 10, 983054, 458752, 9, 1048589, 458752, 10, 983053, 458752, 9, 1048588, 458752, 10, 1048587, 393216, 10)
+
+[node name="start_position" parent="." instance=ExtResource("3_1g1xi")]
+position = Vector2(229, 208)
+
+[node name="Exit" parent="." instance=ExtResource("4_6c2m4")]
+position = Vector2(312, 175)
+
+[node name="player" parent="." instance=ExtResource("1_lywsx")]
+position = Vector2(240, 168)
