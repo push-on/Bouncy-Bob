@@ -1,0 +1,32 @@
+[gd_scene load_steps=11 format=3 uid="uid://h07bj510d36y"]
+
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_2px72"]
+[ext_resource type="PackedScene" uid="uid://bysmc72chclms" path="res://sceans/bg.tscn" id="1_e8boq"]
+[ext_resource type="PackedScene" uid="uid://8r4xjlj6ref6" path="res://sceans/death_zone.tscn" id="2_xxtr7"]
+[ext_resource type="Texture2D" uid="uid://df08u0i6puj1" path="res://assets/Background/Green.png" id="3_l0iel"]
+[ext_resource type="PackedScene" uid="uid://cwakd72mkwl85" path="res://sceans/exit.tscn" id="3_nnone"]
+[ext_resource type="PackedScene" uid="uid://bcal4s26e87u6" path="res://sceans/player.tscn" id="4_1avks"]
+[ext_resource type="PackedScene" uid="uid://dvo8e0yi8gurm" path="res://sceans/start_position.tscn" id="5_e4jg7"]
+[ext_resource type="PackedScene" uid="uid://bv45wb0a5kefk" path="res://sceans/thouch_controles.tscn" id="6_gb667"]
+[ext_resource type="PackedScene" uid="uid://dw62530ep6qeg" path="res://sceans/tile_map.tscn" id="7_0lgl4"]
+[ext_resource type="PackedScene" uid="uid://bahylf2xlq4qu" path="res://sceans/ui.tscn" id="8_icu6m"]
+
+[node name="Level_3" type="Node2D"]
+script = ExtResource("1_2px72")
+
+[node name="UI" parent="." instance=ExtResource("8_icu6m")]
+
+[node name="Thouch_Controles" parent="." instance=ExtResource("6_gb667")]
+
+[node name="BG" parent="." instance=ExtResource("1_e8boq")]
+bg_texture = ExtResource("3_l0iel")
+
+[node name="DeathZone" parent="." instance=ExtResource("2_xxtr7")]
+
+[node name="Exit" parent="." instance=ExtResource("3_nnone")]
+
+[node name="player" parent="." instance=ExtResource("4_1avks")]
+
+[node name="start_position" parent="." instance=ExtResource("5_e4jg7")]
+
+[node name="TileMap" parent="." instance=ExtResource("7_0lgl4")]
