@@ -8,3 +8,4 @@ func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
 		animated_sprite.play("JUMP")
 		body.velocity.y = -jump_force
+		audio_player.play_sfx("jump")

@@ -5,4 +5,3 @@ extends Area2D
 
 func animate():
 	animated_sprite.play("default")
-	print("exit")

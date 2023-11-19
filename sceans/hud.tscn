@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=3 uid="uid://ban5rmig65224"]
+
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_68jnq"]
+[ext_resource type="FontFile" uid="uid://c5ukixi6wn6kq" path="res://assets/font/Kenney Mini Square.ttf" id="1_ai1lh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sepra"]
+font = ExtResource("1_ai1lh")
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6ndkc"]
+font = ExtResource("1_ai1lh")
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_imxt5"]
+font = ExtResource("1_ai1lh")
+font_size = 8
+font_color = Color(1, 1, 1, 0.588235)
+outline_size = 3
+outline_color = Color(0, 0, 0, 0.588235)
+
+[node name="HUD" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_68jnq")
+
+[node name="FPS" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "FPS: 00"
+label_settings = SubResource("LabelSettings_sepra")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Time" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "TIME: 30"
+label_settings = SubResource("LabelSettings_6ndkc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="control_hint" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -69.0
+offset_top = -41.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "controles: 
+left - Right: A, D
+Jump: w, space
+"
+label_settings = SubResource("LabelSettings_imxt5")
+uppercase = true
